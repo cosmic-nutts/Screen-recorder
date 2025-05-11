@@ -12,7 +12,7 @@ type VideoFormValues = {
   title: string;
   description: string;
   tags: string;
-  visibility: "public" | "private";
+  visibility: string;
 };
 
 declare interface FormFieldProps {

@@ -1,3 +1,5 @@
+
+
 export const MAX_VIDEO_SIZE = 500 * 1024 * 1024;
 export const MAX_THUMBNAIL_SIZE = 10 * 1024 * 1024;
 
@@ -19,6 +21,25 @@ export const filterOptions = [
 ];
 
 export const visibilities: Visibility[] = ["public", "private"];
+
+export type Visibility = "public" | "private";
+
+export interface VideoCardProps {
+  id: string;
+  title: string;
+  thumbnail: string;
+  createdAt: Date;
+  userImg: string;
+  username: string;
+  views: number;
+  visibility: Visibility;
+  duration: number;
+}
+
+
+
+
+
 
 export const ICONS = {
   record: "/assets/icons/record.svg",
@@ -47,7 +68,7 @@ export const DEFAULT_RECORDING_CONFIG = {
   videoBitsPerSecond: 2500000,
 };
 
-export const dummyCards = [
+export const dummyCards: VideoCardProps[] = [
   {
     id: "1",
     title: "SnapChat Message",
@@ -96,44 +117,44 @@ export const dummyCards = [
     id: "5",
     title: "New Feature Overview",
     thumbnail: "/assets/samples/thumbnail (5).png",
-    createdAt: new Date("2025-05-05"),
+    createdAt: new Date("2025-05-02"),
     userImg: "/assets/images/david.png",
     username: "David",
-    views: 156,
+    views: 150,
     visibility: "public",
-    duration: 275,
+    duration: 270,
   },
   {
     id: "6",
-    title: "Client Presentation Feedback",
+    title: "How to Use Snapcast",
     thumbnail: "/assets/samples/thumbnail (6).png",
-    createdAt: new Date("2025-05-10"),
-    userImg: "/assets/images/lisa.png",
-    username: "Lisa",
+    createdAt: new Date("2025-03-18"),
+    userImg: "/assets/images/nick.png",
+    username: "Nick",
     views: 89,
-    visibility: "private",
-    duration: 198,
+    visibility: "public",
+    duration: 190,
   },
   {
     id: "7",
-    title: "UI Design Review",
+    title: "Q&A with CEO",
     thumbnail: "/assets/samples/thumbnail (7).png",
-    createdAt: new Date("2025-05-12"),
-    userImg: "/assets/images/alex.png",
-    username: "Alex",
-    views: 124,
-    visibility: "public",
-    duration: 230,
+    createdAt: new Date("2025-06-10"),
+    userImg: "/assets/images/lisa.png",
+    username: "Lisa",
+    views: 125,
+    visibility: "private",
+    duration: 360,
   },
   {
     id: "8",
-    title: "Marketing Strategy Discussion",
+    title: "Sneak Peek: Upcoming Release",
     thumbnail: "/assets/samples/thumbnail (8).png",
-    createdAt: new Date("2025-05-18"),
-    userImg: "/assets/images/jessica.png",
-    username: "Jessica",
-    views: 67,
+    createdAt: new Date("2025-02-28"),
+    userImg: "/assets/images/john.png",
+    username: "John",
+    views: 140,
     visibility: "public",
-    duration: 345,
+    duration: 210,
   },
 ];

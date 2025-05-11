@@ -1,3 +1,4 @@
+import DropdownList from "./DropdownList";
 import Image from "next/image";
 import Link from "next/link";
 import { ICONS } from "@/constants"; // Make sure your tsconfig has "@/constants" alias
@@ -42,7 +43,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
             <input type="text"  placeholder="Search for videos, tags, folder...."/>
             <Image src="/assets/icons/search.svg" alt="search " width={16} height={16}/>
         </div>
-        {/* <DropdownList/> */}
+        <DropdownList/>
       </section>
     </header>
   );

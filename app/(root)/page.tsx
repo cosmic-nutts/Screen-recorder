@@ -1,13 +1,19 @@
-import Header from "@/components/Header"
-
+import Header from "@/components/Header";
+import VideoCard from "@/components/VideoCard";
+import { dummyCards } from "@/constants";
 
 const Page = () => {
   return (
     <main className="wrapper page">
-      <Header subHeader="Public Library" title="All Videos " />
-      <h1 className="text-2xl font-karla">Welcome to Loom Clone</h1>
-    </main>
-  )
-}
+      <Header title="All Videos" subHeader="Public Library" />
+      <section className="video-grid">
+      {dummyCards.map((card) => (
+        <VideoCard key={card.id} {...card} />
+      ))}
 
-export default Page
+      </section>
+    </main>
+  );
+};
+
+export default Page;
