@@ -1,39 +1,57 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
-const user = {}; // change this to your actual user authentication logic
-
+import { authClient } from "@/lib/auth.client";
+import ImageWithFallback from "./ImageWithFallback";
 const Navbar = () => {
   const router = useRouter();
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
 
   return (
     <header className="navbar">
-      <nav className="flex items-center justify-between px-4 py-2">
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/assets/icons/logo.svg" alt="Logo" width={32} height={32} />
-          <h1 className="text-xl font-bold">SnapCast</h1>
+      <nav>
+        <Link href="/">
+          <Image
+            src="/assets/icons/logo (2).svg"
+            alt="SnapChat Logo"
+            width={32}
+            height={32}
+          />
+          <h1>Snipster</h1>
         </Link>
 
         {user && (
-          <figure className="flex items-center gap-4">
-            <button onClick={() => router.push('/profile/123456')}>
-              <Image
-                src="/assets/images/dummy.jpg"
-                height={36}
-                width={36}
-                className="rounded-full aspect-square"
+          <figure>
+            <button onClick={() => router.push(`/profile/${session?.user.id}`)}>
+              <ImageWithFallback
+                src={session?.user.image ?? ""}
                 alt="User"
+                width={36}
+                height={36}
+                className="rounded-full aspect-square"
               />
             </button>
-            <button className="cursor-pointer">
+            <button
+              onClick={async () => {
+                return await authClient.signOut({
+                  fetchOptions: {
+                    onSuccess: () => {
+                      redirect("/sign-in");
+                    },
+                  },
+                });
+              }}
+              className="cursor-pointer"
+            >
               <Image
                 src="/assets/icons/logout.svg"
-                height={24}
-                width={24}
-                className="rotate-180"
                 alt="logout"
+                width={24}
+                height={24}
+                className="rotate-180"
               />
             </button>
           </figure>

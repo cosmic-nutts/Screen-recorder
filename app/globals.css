@@ -13,15 +13,15 @@
 }
 
 @theme {
-  --color-blue-100: #2c325d;
-  --color-light-100: #fff8fb;
-  --color-dark-100: #212121;
+  --color-blue-100: #010312;
+  --color-light-100: #010312;
+  --color-blue-100: #6b75bf;
   --color-gray-20: rgba(108, 102, 133, 0.2);
   --color-gray-25: rgba(108, 102, 133, 0.25);
   --color-gray-40: rgba(58, 56, 77, 0.04);
-  --color-gray-100: #6c6685;
-  --color-pink-10: #ffeef5;
-  --color-pink-100: #ff4393;
+  --color-gray-100: #1a123b;
+  --color-pink-10: #010312;
+  --color-pink-100: #131330;
   --color-orange-100: #fe6247;
   --text-28: 1.75rem;
   --shadow-10: 0px 6px 24px 0px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@
   --background-image-radial-100:
     radial-gradient(
       79.36% 59.94% at 101.94% -1.83%,
-      #ffe5f0 0%,
+      #1a123b 0%,
       #fff 42%,
       rgba(0, 0, 0, 0) 42%
     ),
@@ -131,7 +131,7 @@
           }
 
           p {
-            @apply text-3xl font-semibold text-dark-100 text-center -tracking-[2px];
+            @apply text-3xl font-semibold text-blue-100 text-center -tracking-[2px];
           }
 
           article {
@@ -141,11 +141,11 @@
               @apply flex flex-col items-center gap-1;
 
               h2 {
-                @apply text-base font-bold text-dark-100;
+                @apply text-base font-bold text-blue-100;
               }
 
               p {
-                @apply text-gray-100 font-normal text-sm -tracking-[0.5px];
+                @apply text-blue-100 font-normal text-sm -tracking-[0.5px];
               }
             }
           }
@@ -153,7 +153,7 @@
       }
 
       p {
-        @apply text-sm font-medium text-gray-100;
+        @apply text-sm font-medium text-blue-100;
       }
     }
 
@@ -161,26 +161,26 @@
       @apply flex items-center justify-center lg:w-1/2 w-full lg:h-screen px-10 py-10;
 
       section {
-        @apply rounded-20 bg-white shadow-10 max-w-xl w-full flex flex-col px-5 py-7.5 gap-8;
+        @apply rounded-20 bg-gray-20 shadow-10 max-w-xl w-full flex flex-col px-5 py-7.5 gap-8;
 
         a {
           @apply flex items-center gap-2.5 justify-center;
 
           h1 {
-            @apply text-28 font-black text-blue-100 font-satoshi;
+            @apply text-28 font-black text-gray-100 font-satoshi;
           }
         }
 
         p {
-          @apply text-3xl font-bold text-dark-100 text-center -tracking-[2px];
+          @apply text-3xl font-bold text-blue-100 text-center -tracking-[2px];
 
           span {
-            @apply text-pink-100;
+            @apply text-gray-100;
           }
         }
 
         button {
-          @apply w-full flex justify-center items-center gap-2.5 bg-white border border-gray-25 rounded-4xl py-4 text-base text-dark-100 font-semibold cursor-pointer -tracking-[0.8px];
+          @apply w-full flex justify-center items-center gap-2.5 bg-white border border-gray-25 rounded-4xl py-4 text-base text-gray-100 font-semibold cursor-pointer -tracking-[0.8px]  ;
         }
       }
     }
@@ -191,7 +191,7 @@
     @apply flex flex-col gap-7.5 pt-12.5 pb-20;
 
     h1 {
-      @apply text-3xl font-bold text-dark-100;
+      @apply text-3xl font-bold text-gray-100;
     }
 
     .error-field {
@@ -199,7 +199,7 @@
     }
 
     .submit-button {
-      @apply bg-pink-100 text-white px-4 py-3 rounded-4xl cursor-pointer text-base font-semibold hover:bg-pink-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+      @apply bg-pink-100 text-white px-4 py-3 rounded-4xl cursor-pointer text-base font-semibold hover:bg-blue-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
     }
   }
 
@@ -219,7 +219,7 @@
     @apply absolute bg-white shadow-lg rounded-lg flex flex-col gap-2 w-full z-10 top-12;
 
     .list-item {
-      @apply px-3 py-2.5 text-sm font-medium -tracking-[0.8px] relative text-dark-100 cursor-pointer hover:bg-pink-100 hover:text-white transition-colors duration-200 ease-in-out rounded-md;
+      @apply px-3 py-2.5 text-sm font-medium -tracking-[0.8px] relative text-gray-100 cursor-pointer hover:bg-pink-100 hover:text-white transition-colors duration-200 ease-in-out rounded-md;
 
       img {
         @apply absolute right-3 top-1/2 -translate-y-1/2;
@@ -239,11 +239,11 @@
       @apply flex flex-col items-center gap-1.5;
 
       h1 {
-        @apply text-dark-100 text-2xl font-bold -tracking-[1px];
+        @apply text-blue-100 text-2xl font-bold -tracking-[1px];
       }
 
       p {
-        @apply text-sm font-normal text-gray-100 -tracking-[0.5px];
+        @apply text-sm font-normal text-blue-100 -tracking-[0.5px];
       }
     }
   }
@@ -260,7 +260,7 @@
       @apply border border-gray-20 rounded-18 text-gray-100 py-1.5 px-3.5 flex justify-center items-center w-full h-40 gap-2.5 cursor-pointer;
 
       p {
-        @apply text-dark-100 text-base font-medium;
+        @apply text-blue-100 text-base font-medium;
       }
     }
 
@@ -280,7 +280,7 @@
       }
 
       p {
-        @apply absolute bottom-0 left-0 right-0 bg-dark-100 text-white px-3 py-1 text-sm truncate;
+        @apply absolute bottom-0 left-0 right-0 bg-blue-100 text-white px-3 py-1 text-sm truncate;
       }
     }
   }
@@ -296,7 +296,7 @@
     input,
     select,
     textarea {
-      @apply border border-gray-20 rounded-18 text-dark-100 placeholder:text-gray-100 py-2.5 px-4.5 focus:outline-pink-100 placeholder:font-medium text-base font-semibold;
+      @apply border border-gray-20 rounded-18 text-gray-100 placeholder:text-blue-100 py-2.5 px-4.5 focus:outline-pink-100 placeholder:font-medium text-base font-semibold;
     }
   }
   /* navbar */
@@ -310,7 +310,7 @@
         @apply flex items-center gap-2.5;
 
         h1 {
-          @apply text-xl font-black text-blue-100 font-satoshi -tracking-[0.1px];
+          @apply text-xl font-black text-gray-100 font-satoshi -tracking-[0.1px];
         }
       }
 
@@ -325,7 +325,7 @@
     @apply flex justify-between items-center py-5 gap-5 border-t border-gray-20;
 
     .nav-button {
-      @apply border border-gray-25 rounded-4xl py-2.5 px-5 flex items-center justify-center gap-0.5 text-sm font-semibold text-dark-100;
+      @apply border border-gray-25 rounded-4xl py-2.5 px-5 flex items-center justify-center gap-0.5 text-sm font-semibold text-blue-100;
     }
 
     div {
@@ -361,7 +361,7 @@
           @apply flex justify-between items-center mb-4;
 
           h3 {
-            @apply text-xl font-bold text-dark-100;
+            @apply text-xl font-bold text-blue-100;
           }
 
           button {
@@ -380,7 +380,7 @@
             }
 
             span {
-              @apply text-dark-100 text-base font-medium;
+              @apply text-blue-100 text-base font-medium;
             }
 
             video {
@@ -438,7 +438,7 @@
           }
 
           h1 {
-            @apply text-3xl font-bold text-dark-100 capitalize;
+            @apply text-3xl font-bold text-gray-100 capitalize;
           }
         }
       }
@@ -447,7 +447,7 @@
         @apply flex items-center gap-2 md:gap-4;
 
         a {
-          @apply py-2.5 px-5 flex items-center gap-2.5 text-sm font-semibold text-dark-100 border border-gray-25 rounded-4xl;
+          @apply py-2.5 px-5 flex items-center gap-2.5 text-sm font-semibold text-gray-100 border border-gray-25 rounded-4xl;
 
           span {
             @apply truncate;
@@ -463,7 +463,7 @@
         @apply relative max-w-[500px] w-full;
 
         input {
-          @apply border border-gray-20 py-2 pl-8 pr-5 text-dark-100 text-sm font-normal placeholder:text-gray-100 w-full rounded-[18px] focus:outline-pink-100;
+          @apply border border-gray-20 py-2 pl-8 pr-5 text-gray-100 text-sm font-normal placeholder:text-blue-100 w-full rounded-[18px] focus:outline-pink-100;
         }
 
         img {
@@ -480,7 +480,7 @@
       @apply flex items-center gap-1;
 
       span {
-        @apply text-sm font-semibold text-dark-100 -tracking-[0.8px];
+        @apply text-sm font-semibold text-gray-100 -tracking-[0.8px];
       }
     }
   }
@@ -505,7 +505,7 @@
             @apply flex flex-col gap-0.5;
 
             h3 {
-              @apply text-xs font-semibold text-dark-100;
+              @apply text-xs font-semibold text-gray-100;
             }
 
             p {
@@ -523,7 +523,7 @@
       }
 
       h2 {
-        @apply text-base text-dark-100 font-semibold truncate;
+        @apply text-base text-gray-100 font-semibold truncate;
       }
 
       footer {
@@ -544,7 +544,7 @@
     }
 
     .duration {
-      @apply absolute top-40 right-2 bg-dark-100 font-medium text-white text-xs px-2.5 py-1 rounded-full;
+      @apply absolute top-40 right-2 bg-blue-100 font-medium text-white text-xs px-2.5 py-1 rounded-full;
     }
   }
 
@@ -576,7 +576,7 @@
       }
 
       p {
-        @apply text-lg font-semibold text-dark-100;
+        @apply text-lg font-semibold text-gray-100;
       }
     }
   }
@@ -618,7 +618,7 @@
       @apply flex flex-col gap-2.5;
 
       h1 {
-        @apply text-3xl font-bold text-dark-100;
+        @apply text-3xl font-bold text-blue-100;
       }
 
       figure {
@@ -652,7 +652,7 @@
           @apply border border-gray-20 rounded-[28px] py-2.5 px-4;
 
           p {
-            @apply text-sm font-semibold text-dark-100;
+            @apply text-sm font-semibold text-blue-100;
           }
         }
       }
@@ -666,7 +666,7 @@
       @apply flex items-center gap-1;
 
       p {
-        @apply text-sm font-semibold text-dark-100 capitalize;
+        @apply text-sm font-semibold text-blue-100 capitalize;
       }
     }
   }
