@@ -33,8 +33,7 @@ const SignIn = () => {
               ))}
             </figure>
             <p>
-            Snipster makes screen recording easy. From quick walkthroughs to
-              full presentations, it&apos;s fast, smooth, and shareable in seconds
+            Snipster captures your screen effortlessly. Whether it&apos;s a quick demo or detailed tutorial, Snipster is fast, seamless, and ready to share instantly.
             </p>
             <article>
               <div className="relative w-16 h-16 rounded-full overflow-hidden">
