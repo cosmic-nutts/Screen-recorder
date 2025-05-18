@@ -37,16 +37,23 @@ const SignIn = () => {
               full presentations, it&apos;s fast, smooth, and shareable in seconds
             </p>
             <article>
-              <Image
-                src="/assets/images/jason.png"
-                alt="Jason"
-                width={64}
-                height={64}
-                className="rounded-full"
-              />
+              <div className="relative w-16 h-16 rounded-full overflow-hidden">
+  <Image
+    src="/assets/images/natasha.png"
+    alt="Natasha"
+    width={96}
+    height={96}
+    className="absolute object-cover object-center transform scale-125"
+    style={{ 
+      top: '-10%',  // Adjust these values to focus on the face
+      left: '-10%'  // Adjust these values to focus on the face
+    }}
+  />
+</div>
+
               <div>
-                <h2>Ayan Singh</h2>
-                <p>Product Designer, NovaByte</p>
+                <h2>Natasha</h2>
+                <p>Web Developer</p>
               </div>
             </article>
           </section>
