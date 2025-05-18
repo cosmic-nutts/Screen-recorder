@@ -22,6 +22,7 @@ const page = async ({ params }: Params) => {
         ownerId={video.userId}
         visibility={video.visibility}
         thumbnailUrl={video.thumbnailUrl}
+        
       />
 
       <section className="video-details">
