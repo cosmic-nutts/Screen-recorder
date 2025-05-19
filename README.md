@@ -14,7 +14,7 @@ pnpm dev
 bun dev
 ```
 
-Visit [https://screen-recorder-nu.vercel.app/sign-in]
+Visit (https://screen-recorder-nu.vercel.app/sign-in)
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
